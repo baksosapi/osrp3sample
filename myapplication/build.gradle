@@ -1,0 +1,79 @@
+buildscript {
+    repositories {
+        maven { url 'https://maven.fabric.io/public' }
+    }
+
+    dependencies {
+        // These docs use an open ended version so that our plugin
+        // can be updated quickly in response to Android tooling updates
+
+        // We recommend changing it to the latest version from our changelog:
+        // https://docs.fabric.io/android/changelog.html#fabric-gradle-plugin
+        classpath 'io.fabric.tools:gradle:1.+'
+    }
+}
+
+apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
+
+repositories {
+    maven { url 'https://maven.fabric.io/public' }
+}
+
+android {
+    compileSdkVersion 26
+
+
+
+    defaultConfig {
+        applicationId "org.smartregister.bidan"
+        minSdkVersion 18
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            resValue "string", 'opensrp_url', '"http://118.91.130.18:9090/opensrp"'
+
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+
+    implementation project(':app-core')
+    implementation('org.smartregister:opensrp-client-enketo:1.0.1-SNAPSHOT@aar') {
+        exclude group: 'jacoco', module: 'jacoco'
+        transitive = true
+    }
+    compile 'com.flurry.android:analytics:8.2.0@aar'
+    implementation('com.crashlytics.sdk.android:crashlytics:2.8.0@aar') {
+        transitive = true
+    }
+    annotationProcessor 'com.jakewharton:butterknife:7.0.1'
+    implementation 'com.jakewharton:butterknife:7.0.1'
+    compile 'com.android.support:multidex:1.0.2'
+
+}
+
+
+repositories {
+    maven { url 'https://oss.sonatype.org/content/repositories/snapshots/' }
+}

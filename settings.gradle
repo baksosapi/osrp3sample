@@ -1,0 +1,4 @@
+include ':app-core', ':myapplication'
+//':opensrp-bidan'
+//include ':opensrp-enketo'
+//project(':opensrp-enketo').projectDir = new File(rootProject.projectDir, './libs/opensrp-client-enketo/opensrp-enketo')
