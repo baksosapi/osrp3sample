@@ -15,7 +15,6 @@ import org.json.JSONObject;
 import org.smartregister.adapter.SmartRegisterPaginatedAdapter;
 import org.smartregister.bidan.R;
 import org.smartregister.bidan.sync.BidanClientProcessor;
-//import org.smartregister.bidan.utils.BidanFormUtils;
 import org.smartregister.bidan.utils.EnketoFormUtils;
 import org.smartregister.commonregistry.AllCommonsRepository;
 import org.smartregister.commonregistry.CommonPersonObject;
@@ -48,11 +47,6 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 
 import static org.smartregister.util.Utils.getValue;
-
-//import android.content.res.Configuration;
-//import org.smartregister.Context;
-//import org.smartregister.repository.AllSharedPreferences;
-//import static android.preference.PreferenceManager.getDefaultSharedPreferences;
 
 /**
  * Created by SID

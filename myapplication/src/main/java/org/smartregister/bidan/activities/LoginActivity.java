@@ -302,6 +302,7 @@ public class LoginActivity extends AppCompatActivity {
 
     private void goToHome() {
         startActivity(new Intent(this, BidanHomeActivity.class));
+//        startActivity(new Intent(this, KISmartRegisterActivity.class));
 //        startActivity(new Intent(this, FPSmartRegisterActivity.class));
         finish();
     }

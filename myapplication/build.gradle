@@ -70,7 +70,6 @@ dependencies {
     annotationProcessor 'com.jakewharton:butterknife:7.0.1'
     implementation 'com.jakewharton:butterknife:7.0.1'
     compile 'com.android.support:multidex:1.0.2'
-
 }
 
 

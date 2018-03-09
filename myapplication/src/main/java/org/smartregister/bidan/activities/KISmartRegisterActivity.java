@@ -22,13 +22,9 @@ import static org.smartregister.bidan.utils.AllConstantsINA.FormNames.KARTU_IBU_
 import static org.smartregister.bidan.utils.AllConstantsINA.FormNames.KARTU_IBU_REGISTRATION;
 import static org.smartregister.bidan.utils.AllConstantsINA.FormNames.KOHORT_KB_PELAYANAN;
 
-/**
- * Created by Dimas Ciputra on 2/18/15
- */
 public class KISmartRegisterActivity extends BaseRegisterActivity implements LocationSelectorDialogFragment.OnLocationSelectedListener {
 
     public static final String TAG = KISmartRegisterActivity.class.getName();
-
 
     @Override
     protected Fragment mBaseFragment() {
